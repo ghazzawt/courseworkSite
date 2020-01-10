@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+
+<div class="nav"
+  <a class="active" </a>
+  <a href="Intro.html"> Home</a>
+  <a <href= "Why.html"> Why build a pc?</a>
+  <a <href= "Parts.html"> You will need</a>
+  <a <href= "Building.html"> Building</a>
+  <a <href= "Market.html"> Fickle market</a>
+  <a <href= "Maintenance.html"> Maintenance </a>
+</div
+
+<header>
+  <h1> Introduction </h1>
+</header>
+
+  <p>
+    This website will be a one stop shop for everything you need to know about building computers.
+    It will take you through the whole cycle from why you should build your own PC in the first place right down to
+    the weekly or even monthly maintenance you can do to keep your computer running perfectly for a long time.
+    Dotted in between is some useful information about parts, the market you're buying into when buying computer parts
+    and the actual process of building the computer itself.</p>
+
+  <p>By learning everything on this site you should  not only know exactly how to build your pc and upgraded but also
+    how to keep it running for as Long as possible so it can serve all your computing needs </p>
+
+
+  <!-- Slideshow space -->
+<div class="slideshow-container">
+
+  <!-- Full-width images -->
+  <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="gc1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="mother1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="cpu1.jpg" style="width:100%">
+  </div>
+
+  <!-- Next and back button-->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots-->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<div class="page-footer">
+  <p> This is a demonstration website developed for an educational exercise. Therefore this page incorporates
+  teaxt and images from the web and wikipedia under the creative commons licence. </p>
+</div>
+</body>
+</html>
